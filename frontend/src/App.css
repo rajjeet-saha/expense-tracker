@@ -1,0 +1,151 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  color: #333;
+}
+
+.app {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: #1a1a2e;
+}
+
+.balance-box {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.balance-item {
+  text-align: center;
+  flex: 1;
+}
+
+.balance-item span {
+  display: block;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.balance-item strong {
+  font-size: 20px;
+}
+
+.balance-item.income strong { color: #22c55e; }
+.balance-item.expense strong { color: #ef4444; }
+.balance-item.total strong { color: #1a56a0; }
+
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.form input, .form select {
+  flex: 1;
+  min-width: 120px;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  outline: none;
+}
+
+.form input:focus, .form select:focus {
+  border-color: #1a56a0;
+}
+
+.form button {
+  padding: 10px 24px;
+  background: #1a56a0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.form button:hover { background: #134482; }
+
+.error {
+  color: #ef4444;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.transactions {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.transactions h2 {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #1a1a2e;
+}
+
+.empty {
+  text-align: center;
+  color: #aaa;
+  font-size: 14px;
+  padding: 20px 0;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.transaction:last-child { border-bottom: none; }
+
+.transaction-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.desc { font-size: 15px; font-weight: 500; }
+.date { font-size: 12px; color: #aaa; }
+
+.transaction-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.amount { font-size: 15px; font-weight: 600; }
+.transaction.income .amount { color: #22c55e; }
+.transaction.expense .amount { color: #ef4444; }
+
+.delete {
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px;
+}
+
+.delete:hover { color: #ef4444; }
